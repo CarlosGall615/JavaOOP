@@ -5,32 +5,36 @@ public class Pessoa {
     private String nome;
     private int idade;
 
+     public Pessoa(String nome, int idade) {
+        setNome(nome);
+        setIdade(idade);
+    }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
-        if(this.nome == null || this.nome.isEmpty()){
-            return;
+
+        if(nome == null || nome.isEmpty()){
+            System.out.println("Nome é Obrigatório.");
+        }else{
+            this.nome = nome;
         }
-        this.nome = nome;
+        
     }
 
     public int getIdade() {
         return idade;
     }
+
     public void setIdade(int idade) {
-        if (this.idade <= 0 || this.idade > 120){
-            return;
+
+        if (idade < 0 || idade > 120){
+            System.out.println("Idade inválida. Deve estar entre 0 e 120.");
+        }else{
+            this.idade = idade;
         }
+    }  
 
-        this.idade = idade;
-    }
-
-    public Pessoa(String nome, int idade) {
-
-        this.nome = nome;
-        this.idade = idade;
-    }
-    
-    
 }
