@@ -1,4 +1,4 @@
-package com.unipar.exercicios.atv05;
+package com.unipar.atividade;
 
 public class Main {
     public static void main(String[] args) {
